@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="DemoASPXLookup" Logo="ExpressAppLogo">
+  <BOModel>
+    <Class Name="DucDemo.Module.BusinessObjects.Operational.BangDiem">
+      <OwnMembers>
+        <Member Name="Lop" LookupEditorMode="Auto" />
+        <Member Name="SinhVien" LookupEditorMode="Auto" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Options UseServerMode="True" />
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="13.2.7.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="BangDiem_DetailView">
+      <Items>
+        <PropertyEditor Id="SinhVien" LookupEditorMode="Auto" />
+      </Items>
+    </DetailView>
+    <ListView Id="Lop_LookupListView" ShowAutoFilterRow="True">
+      <Columns>
+        <ColumnInfo Id="@801318e9-3566-4507-b264-9f1004d30fd8" PropertyName="Id" IsNewNode="True" />
+        <ColumnInfo Id="@a4d0f5a7-3921-4bdd-957a-d8837097b257" PropertyName="Name" IsNewNode="True" />
+        <ColumnInfo Id="DisplayName" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="SinhVien_LookupListView" ShowAutoFilterRow="True">
+      <Columns>
+        <ColumnInfo Id="@53a249be-10f8-4c38-abf2-fc102c9bd616" PropertyName="Id" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="Name" Index="1" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>
