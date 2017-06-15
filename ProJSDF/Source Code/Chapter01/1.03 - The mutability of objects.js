@@ -13,12 +13,17 @@ function displayError(message) {
 displayError.numTimesExecuted = 0;
 
 
-/* Class Person. */
-
+/* nó cũng có nghĩa có thể chỉnh sửa class sau khi chúng được đã định nghĩa và 
+các đối tượng sau khi chúng đã được khởi tạo 
+ * It also means you can modify classes after they have been defined and objects after they
+have been instantiated:
+  Class Person. */
+/*Tạo class Person với 2 thuộc tính tên & tuổi*/
 function Person(name, age) {
   this.name = name;
   this.age = age;
 }
+/*Tạo 2 hàm lấy tên & tuổi*/
 Person.prototype = {
   getName: function() {
     return this.name;
@@ -27,19 +32,23 @@ Person.prototype = {
     return this.age;
   }
 }
-
+/* Sử dụng: Tạo mới 1 object*/
 /* Instantiate the class. */
 
 var alice = new Person('Alice', 93);
 var bill = new Person('Bill', 30);
 
-/* Modify the class. */
+/* 
+ * chỉnh sửa class
+ Modify the class. */
 
 Person.prototype.getGreeting = function() {
   return 'Hi ' + this.getName() + '!';
 };
 
-/* Modify a specific instance. */
+/* 
+ * chỉnh sửa hàm đã khởi tạo
+ Modify a specific instance. */
 
 alice.displayGreeting = function() {
   alert(this.getGreeting());
