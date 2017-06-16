@@ -1,3 +1,4 @@
+/*The following is the Interface class that we use throughout the book:*/
 // Constructor.
 
 var Interface = function(name, methods) {
@@ -42,3 +43,6 @@ Interface.ensureImplements = function(object) {
         }
     } 
 };
+/*As you can see, it is very strict about the arguments given to each method and will throw
+an error if any check doesn’t pass. This is done intentionally, so that if you receive no errors,
+you can be certain the interface is correctly declared and implemented.*/
